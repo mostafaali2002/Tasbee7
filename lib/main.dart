@@ -13,7 +13,7 @@ class Tasbee7 extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: SplashViews(),
+      home: const SplashViews(),
     );
   }
 }

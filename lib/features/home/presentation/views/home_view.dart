@@ -4,6 +4,8 @@ import 'package:tasbee7/features/home/widgets/buttons_section.dart';
 import 'package:tasbee7/features/home/widgets/card_item.dart';
 import 'package:tasbee7/features/home/widgets/custom_button.dart';
 import 'package:tasbee7/features/home/widgets/display_image.dart';
+import 'package:tasbee7/features/home/widgets/home_bottom_section.dart';
+import 'package:tasbee7/features/home/widgets/home_text.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -13,6 +15,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -23,20 +26,10 @@ class _HomeViewState extends State<HomeView> {
           children: [
             CardItem(),
             SizedBox(
-              height: 60,
+              height: 50,
             ),
-            Text(
-              "0",
-              style: TextStyle(
-                color: Color(Style.Kcontainercolor),
-                fontSize: 120,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            ButtonsSection(),
-            // DisplayImage(),
+            HomeText(),
+            HomeBottomSection(),
           ],
         ),
       ),

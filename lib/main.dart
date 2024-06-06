@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbee7/features/home/presentation/views/home_view.dart';
 import 'package:tasbee7/features/home/presentation/views/splash_view.dart';
 
 void main() {

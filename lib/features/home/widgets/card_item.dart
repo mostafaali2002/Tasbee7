@@ -4,7 +4,9 @@ import 'package:tasbee7/constant.dart';
 class CardItem extends StatelessWidget {
   const CardItem({
     super.key,
+    required this.text,
   });
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,9 @@ class CardItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: const Color(Style.Kcontainercolor),
       ),
-      child: const Center(
+      child: Center(
         child: Text(
-          'سبحان الله',
+          '$text',
           style: TextStyle(
             fontSize: 50,
             color: Colors.white,
@@ -28,3 +30,19 @@ class CardItem extends StatelessWidget {
     );
   }
 }
+/*
+class CardListViewItem extends StatelessWidget {
+  const CardListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (context, index) {
+        return CardItem();
+      },
+      itemCount: 6,
+    );
+  }
+}
+*/

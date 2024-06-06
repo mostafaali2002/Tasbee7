@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasbee7/constant.dart';
 import 'package:tasbee7/features/home/widgets/card_item.dart';
+import 'package:tasbee7/features/home/widgets/card_list_view_items.dart';
 
 import 'package:tasbee7/features/home/widgets/display_image.dart';
 import 'package:tasbee7/features/home/widgets/home_text.dart';
@@ -12,6 +13,14 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
+final List cardText = [
+  "سبحان الله",
+  "الحمد لله",
+  " الله واكبر",
+  "استغفر الله",
+  "سبحان الله وبحمده",
+];
+
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
@@ -22,21 +31,7 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Row(
-                    children: [
-                      CardItem(text: "الحمد لله"),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      CardItem(text: "استغفر الله"),
-                    ],
-                  ),
-                ),
-              ),
+              const CardListViewItems(),
               const SizedBox(
                 height: 50,
               ),

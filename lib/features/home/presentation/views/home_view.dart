@@ -33,16 +33,16 @@ class _HomeViewState extends State<HomeView> {
             children: [
               const CardListViewItems(),
               const SizedBox(
-                height: 50,
+                height: 20,
               ),
               HomeText(),
               Stack(children: [
                 const DisplayImage(),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 50, vertical: 175),
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 170),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         height: 112,

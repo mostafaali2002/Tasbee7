@@ -8,7 +8,7 @@ class DisplayImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 459,
+      height: 450,
       width: double.infinity,
       child: Image.asset(
         'assets/images/1.png',

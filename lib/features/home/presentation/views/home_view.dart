@@ -13,14 +13,6 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
-final List cardText = [
-  "سبحان الله",
-  "الحمد لله",
-  " الله واكبر",
-  "استغفر الله",
-  "سبحان الله وبحمده",
-];
-
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
@@ -28,73 +20,77 @@ class _HomeViewState extends State<HomeView> {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.only(top: 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const CardListViewItems(),
-              const SizedBox(
-                height: 20,
-              ),
-              HomeText(),
-              Stack(children: [
-                const DisplayImage(),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 170),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 112,
-                        width: 113,
-                        child: FloatingActionButton(
-                          heroTag: "reset",
-                          backgroundColor: const Color(Style.Kcontainercolor),
-                          onPressed: () {
-                            setState(() {
-                              counter = 0;
-                            });
-                          },
-                          child: const Center(
-                            child: Text(
-                              "Reset",
-                              style: TextStyle(
-                                  fontSize: 48, fontFamily: Style.ktextFamily),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 85,
-                      ),
-                      SizedBox(
-                        height: 112,
-                        width: 113,
-                        child: FloatingActionButton(
-                          heroTag: "add",
-                          backgroundColor: const Color(Style.Kcontainercolor),
-                          onPressed: () {
-                            setState(() {
-                              if (counter > 1000) {
-                                counter = 0;
-                              }
-                              counter++;
-                            });
-                          },
-                          child: const Center(
-                            child: Text(
-                              "+",
-                              style: TextStyle(
-                                  fontSize: 90, fontFamily: Style.ktextFamily),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const CardListViewItems(),
+                const SizedBox(
+                  height: 20,
                 ),
-              ]),
-            ],
+                HomeText(),
+                Stack(children: [
+                  const DisplayImage(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 170),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 112,
+                          width: 113,
+                          child: FloatingActionButton(
+                            heroTag: "reset",
+                            backgroundColor: const Color(Style.Kcontainercolor),
+                            onPressed: () {
+                              setState(() {
+                                counter = 0;
+                              });
+                            },
+                            child: const Center(
+                              child: Text(
+                                "Reset",
+                                style: TextStyle(
+                                    fontSize: 48,
+                                    fontFamily: Style.ktextFamily),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 85,
+                        ),
+                        SizedBox(
+                          height: 112,
+                          width: 113,
+                          child: FloatingActionButton(
+                            heroTag: "add",
+                            backgroundColor: const Color(Style.Kcontainercolor),
+                            onPressed: () {
+                              setState(() {
+                                if (counter > 1000) {
+                                  counter = 0;
+                                }
+                                counter++;
+                              });
+                            },
+                            child: const Center(
+                              child: Text(
+                                "+",
+                                style: TextStyle(
+                                    fontSize: 90,
+                                    fontFamily: Style.ktextFamily),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
+              ],
+            ),
           ),
         ),
       ),

@@ -18,6 +18,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.only(top: 10),
           child: SingleChildScrollView(
@@ -30,16 +31,16 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 HomeText(),
                 Stack(children: [
-                  const DisplayImage(),
+                  const DisplayImage(height: 400),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 170),
+                        horizontal: 30, vertical: 150),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
                           height: 112,
-                          width: 113,
+                          width: MediaQuery.of(context).size.width * .3,
                           child: FloatingActionButton(
                             heroTag: "reset",
                             backgroundColor: const Color(Style.Kcontainercolor),
@@ -59,11 +60,11 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         ),
                         const SizedBox(
-                          width: 85,
+                          width: 65,
                         ),
                         SizedBox(
                           height: 112,
-                          width: 113,
+                          width: MediaQuery.of(context).size.width * .3,
                           child: FloatingActionButton(
                             heroTag: "add",
                             backgroundColor: const Color(Style.Kcontainercolor),

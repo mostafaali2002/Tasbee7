@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:tasbee7/features/home/presentation/views/home_view.dart';
@@ -24,11 +23,12 @@ class _SplashViewsState extends State<SplashViews> {
           ));
     });
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SplashText(),
-          DisplayImage(),
+          DisplayImage(height: 450),
         ],
       ),
     );
